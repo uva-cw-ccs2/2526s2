@@ -1,0 +1,231 @@
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[a4paper,10pt]{report}
+
+% ---------- Layout improvements ----------
+\usepackage[margin=3cm]{geometry}
+\usepackage{setspace}
+\setstretch{1.15}
+\setlength{\parskip}{0.4em}
+\setlength{\parindent}{0pt}
+
+\usepackage{titlesec}
+\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+\titlespacing*{\subsection}{0pt}{10pt}{4pt}
+
+\usepackage{enumitem}
+\setlist{itemsep=4pt, topsep=4pt}
+
+% ---------- Citations ----------
+\usepackage[natbibapa,nosectionbib,tocbib,numberedbib]{apacite}
+\AtBeginDocument{\renewcommand{\bibname}{Literature}}
+
+% ---------- Fonts and encoding ----------
+\usepackage{lmodern}
+\usepackage[utf8x]{inputenc}
+
+% ---------- Graphics and formatting ----------
+\usepackage{graphicx}
+\usepackage{color,soul}
+\usepackage{xcolor}
+
+% ---------- Code listings ----------
+\usepackage{listings}
+
+\lstset{
+	basicstyle=\scriptsize\ttfamily,
+	columns=flexible,
+	breaklines=true,
+	numbers=left,
+	numberstyle=\tiny,
+	backgroundcolor=\color[RGB]{245,247,250}
+}
+
+% ---------- Quotes ----------
+\let\oldquote\quote
+\let\endoldquote\endquote
+\renewenvironment{quote}{\footnotesize\oldquote}{\endoldquote}
+
+% ---------- Icons ----------
+\usepackage{pifont}
+
+% ---------- Links ----------
+\usepackage[colorlinks=true,
+linkcolor=black,
+citecolor=black,
+urlcolor=blue]{hyperref}
+
+% ---------- Title ----------
+\title{Computational Communication Science 2\\Course Manual}
+
+\author{\emph{Course coordination and lectures:}\\
+dr.\ Anne Kroon (a.c.kroon@uva.nl)\\
+dr.\ Saurabh Khanna (s.khanna@uva.nl)\\
+\\
+\emph{Lab sessions:}\\
+Roeland Dubèl (r.dubel@uva.nl)\\
+\\
+College of Communication\\
+University of Amsterdam}
+
+\date{Spring Semester 2026 (Block 2)}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+% =========================================================
+\chapter{About this course}
+
+This course manual contains general information, guidelines, rules and schedules for the course \emph{Computational Communication Science 2} (6 ECTS), part of the \emph{Communication in the Digital Society Minor} offered by the College of Communication at the University of Amsterdam. Please read it carefully, as it contains important information regarding assignments, deadlines and grading.
+
+\section{Course description}
+
+A sales website that recommends new products to you personally, a company that uses a chatbot to answer your questions, or an algorithm that automatically identifies and warns you about fake news content: in our digital society, computational methods increasingly shape how we communicate and interact with information.
+
+In this course, we examine the computational methods that underlie these forms of communication. We explore the basic principles behind their design, acquire an understanding of their implications, and learn how these methods can be used for scientific research.
+
+Lectures discuss computational methods and their societal implications. Tutorials focus on hands-on exercises in Python.
+
+At the end of the course, you will have a basic understanding of computational methods used in communication research and practical experience applying them.
+
+This course consists of one lecture and one tutorial per week. In total there are 28 contact hours (7 × 2-hour lectures and 7 × 2-hour tutorials).
+
+\section{Goals}
+
+Upon completion of this course, students should:
+
+\begin{enumerate}[a]
+\item Understand key computational techniques used to study communication in the digital society.
+\item Understand how rule-based, unsupervised, and supervised techniques can be applied to communication research.
+\item Identify benefits and limitations of different computational methods.
+\item Understand which communication science questions can be addressed with computational methods.
+\item Apply a subset of these techniques independently.
+\item Gain experience solving problems in Python using online resources.
+\item Clearly communicate methodological steps taken in computational research.
+\end{enumerate}
+
+\section{Study materials}
+
+Python is the programming language used in this course. Students should bring a laptop to class with a working Python environment installed.
+
+Assigned readings are listed in this syllabus and are available through the UvA Digital Library or Google Scholar. If a reading is not available online, it will be provided via Canvas.
+
+% =========================================================
+\chapter{Assignments, grading, and rules}
+
+Assessment is based on a combination of individual and group assignments.
+
+\section{Overview of assessments}
+
+\begin{itemize}
+\item Regular multiple-choice questions (\(20\%\))
+\item Group assignment: Written report (\(20\%\))
+\item Group assignment: Presentation (\(15\%\))
+\item Exam (\(45\%\))
+\end{itemize}
+
+\section{Regular multiple-choice questions ($20\%$)}
+
+At the start of several lab sessions, students will answer four questions about the assigned literature and the preceding lecture.
+
+MC questions are administered in weeks 2, 3, 4, 7, and 8. In total students answer 20 questions.
+
+To receive full marks, at least 16 questions must be answered correctly.
+
+\section{Group assignment: report ($20\%$)}
+
+Students work in groups on a computational research project. See Section~\ref{sec:groupassignment} for details.
+
+\section{Group assignment: presentation ($15\%$)}
+
+In week 4 (Tuesday 21--4), each group presents their project and explains their methodology, code, and findings.
+
+\section{Exam ($45\%$)}
+
+During the final tutorial session, students complete an exam testing conceptual understanding and including a coding task.
+
+\section{Grading}
+
+Students must obtain a pass (5.5 or higher) for both the group assignment (report and presentation) and the exam.
+
+Improved versions of the group assignment or exam resits cannot receive grades higher than 6.0.
+
+% =========================================================
+\section{Deadlines and submitting assignments}
+
+Assignments must be submitted as PDF files. If multiple files are submitted, compress them into a .zip or .tar.gz archive.
+All assignments must be submitted via Canvas by the specified deadlines. Late submissions receive a grade of 1.
+
+% =========================================================
+\section{Plagiarism \& fraud}
+
+The UvA Regulations Governing Fraud and Plagiarism apply fully to this course.
+
+Students must ensure that all submitted work reflects their own knowledge and skills. Presenting work produced by others — including AI systems — as your own work constitutes academic misconduct.
+
+Turnitin will be used to detect plagiarism.
+
+\subsection{Attributing code}
+
+Code may be inspired by lecture examples or online sources, but sources must be clearly cited.
+
+Example:
+
+\texttt{\# Code adapted from https://stackoverflow.com/...}
+
+You should only submit code that you understand and could explain to another student.
+
+\subsection{Use of AI tools}
+
+AI tools can support learning but must be used responsibly.
+
+\begin{itemize}
+
+\item AI tools may be used to clarify concepts, explain methods, or help debug code you have written yourself.
+
+\item Do not use AI tools to generate or substantially complete assignments that you submit.
+
+\item Do not blindly execute AI-generated code. You are responsible for understanding all submitted work.
+
+\item Prefer using the UvA AI Chat environment. Do not upload course datasets or sensitive information to commercial AI systems.
+
+\item If AI tools were used during your work, this must be disclosed.
+
+\end{itemize}
+
+Instructors may ask students to explain submitted code during tutorials or presentations.
+
+% =========================================================
+\section{Presence and participation}
+
+Students are expected to attend all meetings. Missing more than one tutorial may result in exclusion unless exceptional circumstances apply.
+
+\section{Language}
+
+All meetings and assignments will be conducted in English.
+
+\section{Teaching team}
+
+Anne Kroon and Saurabh Khanna teach the lectures. Roeland Dubèl teaches the tutorials.
+
+Questions about lectures or assignments should be directed to Anne and Saurabh. Questions about tutorial logistics should be directed to Roeland.
+
+Questions about coding errors should be addressed during tutorials rather than by email.
+
+% =========================================================
+\chapter{Group assignment: Research report with code}
+\label{sec:groupassignment}
+
+\input{GroupAssignment}
+
+\chapter{Course Schedule}
+
+\input{CourseSchedule}
+
+\bibliographystyle{apacite}
+\bibliography{literature.bib}
+
+\end{document}
