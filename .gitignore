@@ -1,0 +1,47 @@
+cat << 'EOF' > .gitignore
+# macOS junk
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100/
+.Trashes/
+
+# Windows junk
+Thumbs.db
+ehthumbs.db
+
+# LaTeX build files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+
+# minted / pygments
+_minted*
+*.pyg
+
+# temporary
+*.tmp
+*.temp
+
+# keep source and final output
+!*.tex
+!*.pdf
+EOF
