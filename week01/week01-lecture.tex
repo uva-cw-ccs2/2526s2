@@ -117,7 +117,10 @@
 \author{Anne Kroon \and Saurabh Khanna}
 \institute{Digital Society Minor \\ University of Amsterdam}
 \date{March 30, 2026}
-\titlegraphic{\includegraphics[width=0.42\linewidth,keepaspectratio]{Roadmap_terms.png}}
+\titlegraphic{
+    \hfill
+    \includegraphics[width=0.32\linewidth]{Roadmap_terms.png}
+}
 
 \begin{document}
 
@@ -336,7 +339,7 @@ Digital communication produces large amounts of data:
 	\item archives and documents
 \end{itemize}
 
-Computational methods help us study these data systematically and at scale.
+Computational methods help us study this data systematically and at scale.
 
 \column{0.4\textwidth}
 \includegraphics[width=\linewidth]{doge-big-data-meme.jpg}
@@ -353,37 +356,24 @@ Text $\rightarrow$ Data $\rightarrow$ Representation $\rightarrow$ Model $\right
 \end{center}
 
 \vspace{0.3cm}
-Today we focus mainly on the first two steps.
+Today we focus mainly on how text becomes usable data.
 \end{frame}
 
-\begin{frame}{The new AI landscape}
-Recent developments in AI have changed how many people think about language and text.
+\begin{frame}{Why do the basics still matter?}
+Modern AI tools can automate many language tasks.
 
 \begin{itemize}
-	\item Large Language Models (LLMs)
-	\item AI assistants such as ChatGPT and Copilot
-	\item Automated classification, summarization, and generation
-\end{itemize}
-
-\vspace{0.4cm}
-
-\textbf{Key point:} To understand these tools critically, it helps to understand the basics of computational text analysis.
-\end{frame}
-
-\begin{frame}{Where do LLMs fit?}
-\begin{itemize}
-	\item Modern AI systems can automate many language tasks
-	\item But the core questions remain the same:
-	\begin{itemize}
-		\item How is text represented?
-		\item What patterns are being learned?
-		\item How accurate are the outputs?
-		\item What biases or errors may appear?
-	\end{itemize}
+    \item But the core questions remain the same:
+    \begin{itemize}
+        \item How is text represented?
+        \item What patterns are being learned?
+        \item How accurate are the outputs?
+        \item What biases or errors may appear?
+    \end{itemize}
 \end{itemize}
 
 \vspace{0.3cm}
-\textbf{Takeaway:} Understanding the basics helps you evaluate newer AI systems more critically.
+\textbf{Takeaway:} Understanding basic text analysis helps you evaluate modern AI tools more critically.
 \end{frame}
 
 \begin{frame}{How computers analyze text}
@@ -397,7 +387,7 @@ $\downarrow$
 \vspace{0.1cm}
 Preprocessing
 
-{\small(tokenization, cleaning, stopwords)}
+{\small(tokenization, cleaning, stopword removal)}
 
 \vspace{0.1cm}
 $\downarrow$
@@ -439,33 +429,33 @@ In CCS-2, we build on that foundation.
 \end{frame}
 
 \begin{frame}{Why study text?}
-Text can be interesting for at least two reasons:
+Text can be useful in at least two ways:
 \begin{itemize}
-	\item because the \textbf{text itself} is what we want to study
-	\item because text can be used as a \textbf{means} to answer a broader question
+    \item as the \textbf{object of study} itself
+    \item as a \textbf{source of evidence} for a broader question
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Text as data: analyzing text as a goal}
 Studying text can teach us a lot about communication:
 \begin{itemize}
-	\item We can study what people talk about on health-related platforms (e.g., \cite{sanders_different_2020})
-	\begin{itemize}
-		\item For example: which topics appear on expert-generated versus peer-generated platforms?
-	\end{itemize}
-	\item We can compare different media environments (e.g., \cite{burggraaff_through_2020})
-	\begin{itemize}
-		\item For example: how does online news differ from print news?
-	\end{itemize}
+    \item We can study what people talk about on health platforms (e.g., \cite{sanders_different_2020})
+    \begin{itemize}
+        \item For example: which topics appear on expert-generated versus peer-generated platforms?
+    \end{itemize}
+    \item We can compare language across media environments (e.g., \cite{burggraaff_through_2020})
+    \begin{itemize}
+        \item For example: how does online news differ from print news?
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Text as data: analyzing text as a means}
 Text can also help answer broader research questions:
 \begin{itemize}
-	\item We can use movie descriptions or reviews to study representation in media (e.g., \cite{poma-murialdo_gender_2019})
-	\item We can use webpage text to distinguish between reliable and unreliable information (e.g., \cite{meppelink_reliable_2021})
-	\item We can use content descriptions to build recommendation systems
+\item We can use movie descriptions or reviews to study representation in media (e.g., \cite{poma-murialdo_gender_2019})
+\item We can use webpage text to distinguish between reliable and unreliable information (e.g., \cite{meppelink_reliable_2021})
+\item We can use content descriptions to build recommendation systems
 \end{itemize}
 \end{frame}
 
@@ -519,7 +509,7 @@ Computational methods are powerful, but they should always be used critically.
 \begin{columns}[T]
 	\begin{column}{0.65\textwidth}
 		\begin{block}{Definition}
-			Natural Language Processing (NLP) is a field that studies how computers can process and analyze human language.
+	Natural Language Processing (NLP) studies how computers can process and analyze human language.
 		\end{block}
 
 		\vspace{0.2cm}
@@ -630,15 +620,15 @@ Sometimes researchers also combine both.
 \end{frame}
 
 \begin{frame}{Research example of a bottom-up approach}
-\begin{block}{Word co-occurrence in disease surveillance}
+\begin{block}{Exploring prominent terms in disease-related texts}
 \begin{itemize}
-	\item analyzes which words appear together
-	\item can reveal patterns without predefined categories
-	\item useful for exploratory research
+    \item identifies frequent words and patterns in text
+    \item can reveal themes without predefined categories
+    \item useful for exploratory research
 \end{itemize}
 \begin{center}
-	\includegraphics[width=0.4\linewidth]{wordcloud.png}\\
-	\small \cite{you2021using}
+    \includegraphics[width=0.4\linewidth]{wordcloud.png}\\
+    \small \cite{you2021using}
 \end{center}
 \end{block}
 \end{frame}
@@ -686,10 +676,8 @@ Sometimes researchers also combine both.
 \begin{minted}{python}
 from collections import Counter
 
-texts = [
-    "Communication in the digital society is very very complex",
-    "I like to study digital communication"
-]
+texts = ["Communication in the digital society is very very complex", 
+		 "I like to study it"]
 
 bottom_up = []
 for text in texts:
@@ -707,16 +695,15 @@ This produces:
 [[('very', 2), ('communication', 1), ('in', 1)],
  [('i', 1), ('like', 1), ('to', 1)]]
 \end{minted}
+\textbf{Note:} This is a toy example that counts words within each text separately.
 \end{frame}
 
 \begin{frame}[fragile]{A simple top-down approach}
 \textbf{Goal:} Count specific words that we care about in advance.
 
 \begin{minted}{python}
-texts = [
-    "Communication in the digital society is complex",
-    "I like to study it"
-]
+texts = ["Communication in the digital society is very very complex", 
+		 "I like to study it"]
 
 features = ["communication", "digital", "study"]
 
@@ -777,10 +764,10 @@ Later in the course, we will return to more advanced preprocessing choices.
 \begin{frame}{Typical preprocessing steps}
 \begin{block}{A basic preprocessing pipeline}
 \begin{description}
-	\item[\emph{Tokenization}] splitting text into tokens
-	\item[\emph{Pruning}] removing unnecessary words or symbols
-	\item[\emph{Lemmatization / stemming}] reducing variation in words
-	\item[\emph{N-grams}] capturing neighboring words
+    \item[\emph{Tokenization}] splitting text into tokens
+    \item[\emph{Cleaning / filtering}] removing or normalizing unwanted elements
+    \item[\emph{Stopword removal}] removing very frequent words when appropriate
+    \item[\emph{Lemmatization / stemming}] reducing variation in word forms
 \end{description}
 \end{block}
 
@@ -836,7 +823,6 @@ Packages such as NLTK provide tokenizers that handle text more carefully.
 \begin{itemize}
 	\item better with punctuation
 	\item better with contractions
-	\item still not perfect
 \end{itemize}
 
 \begin{minted}{python}
@@ -853,6 +839,66 @@ tokens
 [['This', 'is', 'a', 'text'],
  ['I', 'have', "n't", 'seen', 'John', "'s", 'derring-do.', 'Second', 'sentence', '!']]
 \end{minted}
+
+\pause
+\small \textbf{Note:} Better does not mean perfect — tokenizers still make rule-based choices.
+\end{frame}
+
+\begin{frame}[fragile]{Tokenizing and removing punctuation}
+\begin{minted}{python}
+from nltk.tokenize import RegexpTokenizer
+
+tokenizer = RegexpTokenizer(r'\w+')
+
+text = "Hi students, what's up!"
+tokens = tokenizer.tokenize(text)
+
+print(tokens)
+\end{minted}
+
+\pause
+
+\begin{minted}{python}
+['Hi', 'students', 'what', 's', 'up']
+\end{minted}
+
+\pause
+
+\textbf{Regex:} \texttt{\textbackslash w+} = one or more word characters
+
+\pause
+
+\textbf{Note:}
+\begin{itemize}
+\item Removes punctuation
+\item Splits contractions ("what's" → "what", "s")
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Choosing a tokenizer}
+
+\textbf{There is no perfect tokenizer — it depends on your goal}
+
+\vspace{1em}
+
+\begin{itemize}
+\item \texttt{split()}  
+→ very simple (spaces only)  
+→ good for first introduction  
+
+\vspace{0.5em}
+
+\item \texttt{TreebankWordTokenizer}  
+→ handles punctuation and contractions  
+→ good for linguistic analysis  
+
+\vspace{0.5em}
+
+\item \texttt{RegexpTokenizer}  
+→ removes punctuation, keeps words  
+→ good for counting and simple models  
+\end{itemize}
+
 \end{frame}
 
 \begin{frame}{Stopwords}
@@ -887,7 +933,7 @@ mystopwords = stopwords.words("english")
 mystopwords.extend(["this", "is"])
 
 tokens_without_stopwords = [
-    [word for word in doc if word.lower() not in mystopwords]
+    [word.lower() for word in doc if word.lower() not in mystopwords]
     for doc in tokens
 ]
 
@@ -899,28 +945,14 @@ tokens_without_stopwords
 \end{minted}
 \end{frame}
 
-\begin{frame}[fragile]{Removing punctuation}
-\begin{minted}{python}
-from nltk.tokenize import RegexpTokenizer
-
-tokenizer = RegexpTokenizer(r'\w+')
-tokenizer.tokenize("Hi students, what's up!")
-\end{minted}
-
-\pause
-
-\begin{minted}{python}
-['Hi', 'students', 'what', 's', 'up']
-\end{minted}
-\end{frame}
 
 \begin{frame}{A note on modern NLP tools}
 Many ideas we discuss today also appear in newer tools and workflows.
 
 \begin{itemize}
-	\item NLTK is great for learning the basics
-	\item Other common tools include \texttt{spaCy} and transformer-based models
-	\item The core logic remains similar:
+\item \texttt{NLTK} is great for learning the basics
+\item Other common tools include \texttt{spaCy} and transformer-based models
+\item Even with newer tools, the core workflow is still:
 	\begin{itemize}
 		\item tokenize
 		\item represent
@@ -929,6 +961,40 @@ Many ideas we discuss today also appear in newer tools and workflows.
 	\end{itemize}
 \end{itemize}
 \end{frame}
+
+\begin{frame}{Do we still need preprocessing?}
+
+\textbf{Short answer: yes --- but it depends on your method}
+
+\vspace{0.7em}
+
+\textbf{When preprocessing is important:}
+\begin{itemize}
+\item Counting words (e.g., frequency, TF-IDF)
+\item Dictionary-based analysis (e.g., sentiment, LIWC)
+\item Simple models or recommender systems
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Do we still need preprocessing?}
+
+\textbf{When less preprocessing is needed:}
+\begin{itemize}
+\item Modern AI models (e.g., BERT, GPT)
+\item Handle tokenization and variation internally
+\end{itemize}
+
+\vspace{0.7em}
+
+\textbf{Key idea:}
+\begin{itemize}
+\item If \textbf{you design features} → preprocessing matters
+\item If \textbf{model learns features} → less preprocessing
+\end{itemize}
+
+\end{frame}
+
 
 \begin{frame}{Tomorrow's tutorial}
 \begin{block}{Tutorial meeting}
@@ -945,9 +1011,9 @@ Many ideas we discuss today also appear in newer tools and workflows.
 \begin{itemize}
 	\item Digital communication produces large amounts of textual data
 	\item Computational methods help us analyze text systematically
-	\item Text needs to be transformed into structured data
+	\item For most computational analysis, text must be represented in a structured form.
 	\item Bottom-up and top-down approaches each have strengths
-	\item Preprocessing is an important first step
+	\item Preprocessing is an important first step 
 \end{itemize}
 \end{frame}
 
