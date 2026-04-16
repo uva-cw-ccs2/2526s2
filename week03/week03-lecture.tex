@@ -728,7 +728,6 @@ print(sim)
   \begin{block}{Feature engineering matters}
     \begin{itemize}[<+>]
       \item What attributes do you include? Genre, plot, tags, director?
-      \item You can also create your own features, for example topic scores from LDA.
     \end{itemize}
   \end{block}
   \pause
@@ -736,7 +735,6 @@ print(sim)
     \begin{enumerate}[<+>]
       \item Cosine similarity
       \item Embedding-based similarity
-      \item LDA topic scores
     \end{enumerate}
   \end{block}
 \end{frame}
@@ -793,14 +791,21 @@ print(sim)
 \end{frame}
 
 \begin{frame}{Item-based filtering}
-  \begin{block}{The idea}
+  \begin{block}{Core idea}
     \begin{itemize}[<+>]
-      \item If two items are liked by the same users, they are probably similar
-      \item We can recommend one item based on the other
+      \item Look at which items are bought by the same users
+      \item If many users buy both item \textit{X} and item \textit{Y} \ldots
+      \item \ldots then these items are probably \textbf{similar}
+      \item So: if a user buys \textit{Y}, we recommend \textit{X}
     \end{itemize}
   \end{block}
-  \begin{exampleblock}{Example}
-    Alex, Sanne, and Marthe all like skincare products \textit{X} and \textit{Y}. When Denise buys product \textit{Y}, product \textit{X} is recommended.
+
+  \begin{exampleblock}{Example (Amazon)}
+    Many users buy a \textit{phone} together with a \textit{phone case}. \\
+    You buy a phone. \\
+    
+    \vspace{0.3em}
+    $\Rightarrow$ Amazon recommends a phone case.
   \end{exampleblock}
 \end{frame}
 
